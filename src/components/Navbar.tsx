@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import logo from "@/assets/logo.png";
 
@@ -62,12 +63,12 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <a
-                href="/tech-rider"
-                className="ml-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:shadow-glow transition-shadow"
-              >
-                Tech rider
-              </a>
+              <Link
+                to="/tech-rider"
+                  className="ml-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:shadow-glow transition-shadow"
+>
+                  Tech rider
+              </Link>
             </li>
           </ul>
 
@@ -101,13 +102,13 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <a
+                <Link
                   onClick={() => setOpen(false)}
-                  href="/tech-rider"
+                  to="/tech-rider"
                   className="block px-6 py-4 text-foreground/90 hover:bg-primary/10 hover:text-primary transition font-semibold"
                 >
                   Tech rider
-                </a>
+                </Link>
               </li>
             </motion.ul>
           )}
