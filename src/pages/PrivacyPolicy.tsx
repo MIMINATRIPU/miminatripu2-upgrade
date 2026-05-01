@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
 
               <section>
                 <h2 className="font-display font-bold text-2xl text-foreground mb-3">Poslední aktualizace</h2>
-                <p>1. ledna 2026</p>
+                <p>2.5. 2026</p>
               </section>
             </article>
           </motion.div>

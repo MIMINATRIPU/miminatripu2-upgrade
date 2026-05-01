@@ -105,7 +105,7 @@ const SinglSection = () => {
             <p className="text-foreground/70 mb-6 max-w-md">
               Odpočet do dalšího hudebního překvapení. Zůstaň naladěn na našich streamovacích kanálech.
             </p>
-            <div className="flex flex-wrap gap-3 sm:gap-5">
+            <div className="flex flex-wrap gap-3 sm:gap-2">
               <Cell value={t.d} label="Dní" />
               <span className="text-3xl text-primary self-center">:</span>
               <Cell value={t.h} label="Hodin" />

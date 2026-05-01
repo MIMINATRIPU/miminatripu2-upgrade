@@ -66,20 +66,9 @@ const Hero = () => {
           transition={{ delay: 0.1, duration: 0.9, ease: [0.25, 1, 0.5, 1] }}
           className="mx-auto mb-6 h-24 w-24 sm:h-32 sm:w-32 object-contain drop-shadow-[0_0_30px_hsl(var(--primary)/0.6)] animate-float-slow"
         />
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-mono uppercase tracking-[0.2em] text-primary mb-6"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-          </span>
-          Funkpop · Valmez · 2025
-        </motion.div>
+    
 
-        <h1 className="font-display font-bold tracking-tight leading-[0.85] text-[clamp(3rem,14vw,11rem)] text-glow">
+        <h1 className="font-display font-bold tracking-tight leading-[0.85] text-[clamp(3rem,14vw,11rem)] text-glow whitespace-nowrap">
           {title.split("").map((char, i) => (
             <motion.span
               key={i}

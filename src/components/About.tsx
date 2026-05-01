@@ -17,10 +17,7 @@ const About = () => {
             <h2 className="font-display font-bold text-5xl sm:text-7xl tracking-tight leading-[0.9]">
               <span className="text-gradient">O&nbsp;nás</span>
             </h2>
-            <div className="mt-8 inline-flex items-center gap-3 glass rounded-full px-4 py-2 text-sm">
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <span className="font-mono uppercase tracking-widest text-xs">Funkpop · Valmez</span>
-            </div>
+
             <div className="mt-8 relative group rounded-3xl overflow-hidden border border-border shadow-card">
               <img
                 src={bandPhoto}
@@ -33,7 +30,7 @@ const About = () => {
                 <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary bg-background/70 backdrop-blur px-2 py-1 rounded-full">
                   // band shot
                 </span>
-                <span className="font-display font-bold text-xs text-primary">VALMEZ ’26</span>
+              
               </div>
             </div>
           </motion.div>
@@ -62,7 +59,7 @@ const About = () => {
             <div className="grid grid-cols-3 gap-4 pt-6">
               {[
                 { n: "6", l: "členů" },
-                { n: "1", l: "singl out" },
+                { n: "4", l: "singly out" },
                 { n: "∞", l: "energie" },
               ].map((s, i) => (
                 <motion.div

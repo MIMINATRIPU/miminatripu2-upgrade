@@ -44,7 +44,7 @@ const ConcertSection = () => {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-primary">
                   <Clock className="h-4 w-4" />
                 </span>
-                <span><span className="text-foreground/60 text-sm">Začátek:</span> <strong>22:00</strong></span>
+                <span><span className="text-foreground/60 text-sm">Začátek:</span> <strong>21:00</strong></span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-primary">
