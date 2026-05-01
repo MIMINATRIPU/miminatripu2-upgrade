@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom"; // 1. Přidej tento import
 import logo from "@/assets/logo.png";
 
 const TechRiderNavbar = () => {
@@ -12,22 +13,26 @@ const TechRiderNavbar = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 glass shadow-card">
-          <a href="/" className="flex items-center gap-2 group">
+          
+          {/* 2. Změň <a> na <Link> u loga */}
+          <Link to="/" className="flex items-center gap-2 group">
             <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 ring-1 ring-primary/30 shadow-glow group-hover:animate-pulse-glow overflow-hidden">
               <img src={logo} alt="MIMINATRIPU logo" className="h-8 w-8 object-contain" />
             </span>
             <span className="font-display font-bold tracking-widest text-sm sm:text-base">
               MIMINA<span className="text-primary">TRIPU</span>
             </span>
-          </a>
+          </Link>
 
-          <a
-            href="/"
+          {/* 3. Změň <a> na <Link> u tlačítka zpět */}
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 px-6 py-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-all duration-300 hover:shadow-glow"
           >
             <ArrowLeft size={18} />
             <span>Zpět na hlavní stránku</span>
-          </a>
+          </Link>
+          
         </div>
       </div>
     </motion.nav>
