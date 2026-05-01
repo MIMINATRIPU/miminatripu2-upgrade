@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Play } from "lucide-react";
+import singlCover from "@/assets/romske-prokleti.jpg";
 
 // Original site uses single date around mid-Feb 2026; we set a target.
 const TARGET = new Date("2026-02-15T00:00:00").getTime();
@@ -71,18 +72,23 @@ const SinglSection = () => {
             <div className="relative aspect-square mx-auto max-w-md preserve-3d transition-transform duration-700 group-hover:[transform:rotateY(8deg)_rotateX(-4deg)]">
               <div className="absolute -inset-4 rounded-3xl bg-primary/30 blur-3xl opacity-60 group-hover:opacity-100 transition-opacity" />
               <div className="relative h-full w-full rounded-3xl overflow-hidden border-2 border-primary/40 shadow-elegant">
-                {/* fallback graphic since we don't have the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-background" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary-foreground/70 mb-3">SINGL · 2026</span>
-                  <h3 className="font-display font-black text-3xl sm:text-5xl text-glow leading-none">
-                    ROMSKÉ<br />PROKLETÍ
+                <img
+                  src={singlCover}
+                  alt="ROMSKÉ PROKLETÍ – obal singlu"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-transparent to-background/70" />
+                <div className="absolute inset-x-0 bottom-0 p-6 text-center">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-2 block">SINGL · 2026</span>
+                  <h3 className="font-display font-black text-2xl sm:text-4xl text-glow leading-none">
+                    ROMSKÉ PROKLETÍ
                   </h3>
-                  <span className="mt-4 inline-block h-px w-16 bg-primary" />
-                  <span className="mt-3 font-mono text-xs text-primary">MIMINATRIPU</span>
+                  <span className="mt-3 inline-block h-px w-16 bg-primary" />
+                  <span className="mt-2 font-mono text-xs text-primary block">MIMINATRIPU</span>
                 </div>
                 {/* vinyl */}
-                <div className="absolute -right-20 top-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-black border-8 border-zinc-900 shadow-2xl animate-spin-slow opacity-90 group-hover:-right-10 transition-all duration-700">
+                <div className="absolute -right-24 top-1/2 -translate-y-1/2 h-56 w-56 rounded-full bg-black border-8 border-zinc-900 shadow-2xl opacity-80 group-hover:-right-12 transition-all duration-700" style={{ animation: "spin 14s linear infinite" }}>
                   <div className="absolute inset-1/3 rounded-full bg-primary" />
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import bandPhoto from "@/assets/band-photo.jpg";
 
 const About = () => {
   return (
@@ -19,6 +20,21 @@ const About = () => {
             <div className="mt-8 inline-flex items-center gap-3 glass rounded-full px-4 py-2 text-sm">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
               <span className="font-mono uppercase tracking-widest text-xs">Funkpop · Valmez</span>
+            </div>
+            <div className="mt-8 relative group rounded-3xl overflow-hidden border border-border shadow-card">
+              <img
+                src={bandPhoto}
+                alt="Kapela MIMINATRIPU"
+                loading="lazy"
+                className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary bg-background/70 backdrop-blur px-2 py-1 rounded-full">
+                  // band shot
+                </span>
+                <span className="font-display font-bold text-xs text-primary">VALMEZ ’26</span>
+              </div>
             </div>
           </motion.div>
 

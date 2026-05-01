@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Instagram, Youtube, Facebook, ArrowDown } from "lucide-react";
 import heroStage from "@/assets/hero-stage.jpg";
+import logo from "@/assets/logo.png";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
@@ -57,6 +58,14 @@ const Hero = () => {
       </div>
 
       <motion.div style={{ opacity, y }} className="relative z-10 text-center px-4 max-w-5xl">
+        <motion.img
+          src={logo}
+          alt="MIMINATRIPU logo"
+          initial={{ opacity: 0, scale: 0.6, rotate: -10 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ delay: 0.1, duration: 0.9, ease: [0.25, 1, 0.5, 1] }}
+          className="mx-auto mb-6 h-24 w-24 sm:h-32 sm:w-32 object-contain drop-shadow-[0_0_30px_hsl(var(--primary)/0.6)] animate-float-slow"
+        />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
