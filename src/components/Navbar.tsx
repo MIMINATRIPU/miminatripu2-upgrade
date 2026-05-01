@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
+import logo from "@/assets/logo.png";
+
 const links = [
   { label: "O nás", href: "#onas" },
   { label: "Singl", href: "#singl" },
   { label: "Koncerty", href: "#koncerty" },
   { label: "Členové", href: "#clenove" },
+  { label: "Galerie", href: "https://photos.google.com/u/1/albums?hl=cs&pli=1", external: true },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
@@ -37,10 +40,8 @@ const Navbar = () => {
           }`}
         >
           <a href="#domu" className="flex items-center gap-2 group">
-            <span className="relative inline-block h-9 w-9 rounded-full bg-primary shadow-glow group-hover:animate-pulse-glow">
-              <span className="absolute inset-1 rounded-full bg-background flex items-center justify-center font-display font-bold text-primary text-sm">
-                M
-              </span>
+            <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 ring-1 ring-primary/30 shadow-glow group-hover:animate-pulse-glow overflow-hidden">
+              <img src={logo} alt="MIMINATRIPU logo" className="h-8 w-8 object-contain" />
             </span>
             <span className="font-display font-bold tracking-widest text-sm sm:text-base">
               MIMINA<span className="text-primary">TRIPU</span>
@@ -52,6 +53,7 @@ const Navbar = () => {
               <li key={l.href}>
                 <a
                   href={l.href}
+                  {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors group"
                 >
                   {l.label}
@@ -91,6 +93,7 @@ const Navbar = () => {
                   <a
                     onClick={() => setOpen(false)}
                     href={l.href}
+                    {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="block px-6 py-4 text-foreground/90 hover:bg-primary/10 hover:text-primary transition"
                   >
                     {l.label}
