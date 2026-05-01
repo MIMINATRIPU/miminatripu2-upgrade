@@ -1,4 +1,4 @@
-const words = ["FUNKPOP", "VALMEZ", "ROMSKÉ PROKLETÍ", "LIVE 2026", "MIMINATRIPU", "DIRTY FUSION"];
+const words = ["MIMINATRIPU", "MIMINATRIPU", "MIMINATRIPU", "MIMINATRIPU", "MIMINATRIPU"];
 
 const Marquee = () => {
   const items = [...words, ...words];
