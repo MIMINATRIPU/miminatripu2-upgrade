@@ -3,26 +3,41 @@ name: NodeJS with Webpack
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
-
     steps:
     - uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 20.x
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 20
+        cache: 'npm'
 
-    - name: Build
+    - name: Install and Build
       run: |
         npm install
-        npx webpack
+        npm run build
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./dist # Ujisti se, že Webpack ukládá do 'dist'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
