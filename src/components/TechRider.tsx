@@ -9,42 +9,44 @@ interface TechDoc {
   isZip?: boolean;
 }
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const techDocs: TechDoc[] = [
   {
     title: "MIMINATRIPU - PR",
     description: "Zde najdete všechny informace týkající se našeho PR a marketingových aktivit.",
-    pdfPath: "/pdf/MIMINATRIPU - PR SHEET.pdf",
+    pdfPath: `${baseUrl}pdf/MIMINATRIPU - PR SHEET.pdf`,
     fileName: "MIMINATRIPU - PR SHEET.pdf",
   },
   {
     title: "MIMINATRIPU - PR text",
     description: "Podrobnosti o kapele (stejné informace se nacházejí v sekci 'o nás' na hlavní stránce).",
-    pdfPath: "/pdf/MIMINATRIPU PR TEXT - KAPELA, NOVÝ SINGL.pdf",
+    pdfPath: `${baseUrl}pdf/MIMINATRIPU PR TEXT - KAPELA, NOVÝ SINGL.pdf`,
     fileName: "MIMINATRIPU PR TEXT - KAPELA, NOVÝ SINGL.pdf",
   },
   {
     title: "MIMINATRIPU - Repertoárový list pro OSA",
     description: "Repertoárový list obsahuje všechny písně, které kapela v současnosti interpretuje (postupně se bude aktualizovat).",
-    pdfPath: "/pdf/MIMINATRIPU – REPERTOÁROVÝ LIST PRO OSA.pdf",
+    pdfPath: `${baseUrl}pdf/MIMINATRIPU – REPERTOÁROVÝ LIST PRO OSA.pdf`,
     fileName: "MIMINATRIPU – REPERTOÁROVÝ LIST PRO OSA.pdf",
   },
   {
     title: "MIMINATRIPU - Stageplan",
     description: "Stageplan obsahuje informace o technickém vybavení a rozložení scény pro naše koncerty.",
-    pdfPath: "/pdf/MIMINATRIPU – STAGEPLAN.pdf",
+    pdfPath: `${baseUrl}pdf/MIMINATRIPU – STAGEPLAN.pdf`,
     fileName: "MIMINATRIPU – STAGEPLAN.pdf",
   },
   {
     title: "MIMINATRIPU - Rider",
     description: "Rider obsahuje informace o technických požadavcích a vybavení potřebném pro naše koncerty.",
-    pdfPath: "/pdf/MIMINATRIPU – RIDER.pdf",
+    pdfPath: `${baseUrl}pdf/MIMINATRIPU – RIDER.pdf`,
     fileName: "MIMINATRIPU – RIDER.pdf",
   },
   {
     title: "MIMINATRIPU - Loga",
     description: "Loga kapely v různých formátech a velikostech (pouze stahování ZIP).",
-    pdfPath: "/logos/MIMINATRIPU-LOGOS.zip",
-    fileName: "MIMINATRIPU-LOGOS.zip",
+    pdfPath: `${baseUrl}logos/MIMINATRIPU-LOGA.zip`,
+    fileName: "MIMINATRIPU-LOGA.zip",
     isZip: true,
   },
 ];
@@ -95,8 +97,6 @@ const TechRider = () => {
                   <a
                     href={doc.pdfPath}
                     download={doc.fileName}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]"
                   >
                     <Download size={18} />
