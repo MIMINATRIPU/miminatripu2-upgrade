@@ -97,7 +97,7 @@ const Card = ({ m, i }: { m: Member; i: number }) => {
           src={m.photo}
           alt={`${m.name} – ${m.role}`}
           loading="lazy"
-          className="h-full w-full object-cover grayscale-[40%] saturate-75 group-hover:grayscale-0 group-hover:saturate-100 group-hover:scale-105 transition-all duration-700"
+          className="h-full w-full object-cover grayscale-[40%] saturate-90 group-hover:grayscale-0 group-hover:saturate-100 group-hover:scale-105 transition-all duration-500"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card/95 via-card/20 to-transparent" />
         <span className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-[0.25em] text-primary bg-background/70 backdrop-blur px-2 py-1 rounded-full">
