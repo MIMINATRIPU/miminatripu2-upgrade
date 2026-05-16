@@ -1,6 +1,6 @@
 # MIMINATRIPU - Oficiální webová stránka
 
-Moderní, responsivní webová stránka kapely MIMINATRIPU postavená čistě na HTML, CSS a JavaScript.
+Moderní, responsivní webová stránka kapely MIMINATRIPU postavená na TypeScriptu.
 
 ## 📋 Obsah
 
